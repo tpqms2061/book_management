@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/books")
 @RequiredArgsConstructor
 public class BookController {
-    private  final BookService bookService;
+    private final BookService bookService;
 
     @GetMapping
     public List<Book> list() {
@@ -36,7 +36,7 @@ public class BookController {
     }
 
     @PutMapping("/{id}")
-    public Book update(@PathVariable Integer id, @Valid @RequestBody BookDto bookDto) {
+    public Book update(@PathVariable Integer id, @Valid @RequestBody BookDto bookDto){
         Book book = new Book();
         book.setTitle(bookDto.getTitle());
         book.setAuthorId(bookDto.getAuthorId());
@@ -50,4 +50,6 @@ public class BookController {
 
         return ResponseEntity.noContent().build();
     }
+
+
 }

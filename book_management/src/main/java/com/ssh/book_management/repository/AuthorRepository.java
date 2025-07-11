@@ -32,16 +32,16 @@ public class AuthorRepository {
     }
 
 //    update하려면 키가 필요함
-    public Author update(Integer id, Author updatedAuthor) {
-        if (!store.containsKey(id)) {
-            throw new NoSuchElementException(id + "저자가 없습니다.");
-        }
-
-        updatedAuthor.setId(id); // 받아온 작가 데이터를 바꾸는거니까 id를 유지시키고
-        store.put(id, updatedAuthor);
-
-        return updatedAuthor;
-    }
+//    public Author update(Integer id, Author updatedAuthor) {
+//        if (!store.containsKey(id)) {
+//            throw new NoSuchElementException(id + "저자가 없습니다.");
+//        }
+//
+//        updatedAuthor.setId(id); // 받아온 작가 데이터를 바꾸는거니까 id를 유지시키고
+//        store.put(id, updatedAuthor);
+//
+//        return updatedAuthor;
+//    }
 
     public void delete(Integer id) {
         store.remove(id);

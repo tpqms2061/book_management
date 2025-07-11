@@ -27,10 +27,10 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public Book update(Integer id, Book book) {
+    public Book update(Integer id, Book updatebook) {
         getById(id);
-        book.setId(id);
-        return bookRepository.save(book);
+        updatebook.setId(id);
+        return bookRepository.save(updatebook);
     }
 
 
